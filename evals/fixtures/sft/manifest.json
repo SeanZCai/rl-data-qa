@@ -1,0 +1,14 @@
+{
+  "version": "synthetic-test-1",
+  "use": "training",
+  "training_method": "SFT",
+  "intended_stage": "intake only",
+  "task_type": "string transformations",
+  "record_count": 4,
+  "source": "programmatically constructed toy examples",
+  "license": "CC0-1.0",
+  "review_pass_count": 0,
+  "base_model_evaluation_available": false,
+  "post_training_run_available": false,
+  "notes": "This is a tiny synthetic fixture, not a production dataset."
+}

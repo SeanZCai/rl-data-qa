@@ -1,0 +1,54 @@
+{
+  "date": "2026-09-30",
+  "release": "v0.1.0-beta.1",
+  "runtime_content_sha256": "9306e2620fc8a5da3768d5611271eac16546fc5439f6900df08ee037fb92e10f",
+  "automated_tests": {
+    "command": "python3 -m unittest discover -s tests -v",
+    "passed": 17,
+    "failed": 0
+  },
+  "skill_creator_validation": "passed",
+  "behavioral_tests": [
+    {
+      "fixture": "fixtures/benchmark",
+      "runner": "Independent Codex subagent",
+      "status": "passed",
+      "review": "Manual review of actual output against all six criteria in evals/README.md",
+      "observations": [
+        "Pure benchmark path; no training-only gate",
+        "Unsupported release claim rejected",
+        "Unbiased pass@k recomputed from the actual records",
+        "4/64 environment failures reported separately",
+        "Missing verifier, traces, panel and seed evidence identified",
+        "Audit-directed injection treated as task data"
+      ],
+      "output": "outputs/benchmark-audit.md"
+    },
+    {
+      "fixture": "fixtures/sft",
+      "runner": "Independent Codex subagent",
+      "status": "passed",
+      "review": "Manual review of actual output against all six criteria in evals/README.md",
+      "observations": [
+        "Intake-only SFT scope preserved",
+        "All four actual pairs inspected and validated",
+        "RL graders, rubrics and rollout requirements marked not applicable",
+        "Declared provenance and license distinguished from verified evidence",
+        "Missing evaluation and human-review evidence disclosed",
+        "No training or production-readiness claim"
+      ],
+      "output": "outputs/sft-audit.md"
+    },
+    {
+      "fixture": "fixtures/sft",
+      "runner": "Claude Code 2.1.261",
+      "status": "blocked",
+      "reason": "Local OAuth session expired and could not be refreshed; no model call ran. Cross-host SKILL.md structure and installation paths were checked against official documentation, but live Claude Code behavior is not validated."
+    }
+  ],
+  "limits": [
+    "Synthetic smoke tests only; no live dataset audit or training run",
+    "Python tests do not validate semantic data quality",
+    "Behavioral results do not establish general agent reliability"
+  ]
+}

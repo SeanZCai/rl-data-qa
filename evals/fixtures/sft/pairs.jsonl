@@ -1,0 +1,4 @@
+{"id": "0", "prompt": "Uppercase: green", "response": "GREEN", "source": "synthetic-test-1"}
+{"id": "1", "prompt": "Uppercase: blue", "response": "BLUE", "source": "synthetic-test-1"}
+{"id": "2", "prompt": "Reverse: cat", "response": "tac", "source": "synthetic-test-1"}
+{"id": "3", "prompt": "Reverse: dog", "response": "god", "source": "synthetic-test-1"}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "RL Data QC/QA (Beta)"
+  short_description: "Audit training and benchmark data against evidence"
+  default_prompt: "Use $rl-data-qa to audit this dataset and report release blockers, missing evidence, and the next applicable checks."

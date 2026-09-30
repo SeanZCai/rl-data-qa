@@ -1,0 +1,24 @@
+{
+  "version": "synthetic-test-1",
+  "use": "benchmark",
+  "training_method": null,
+  "grading": "deterministic",
+  "target": "rank capability across two models",
+  "tasks": [
+    "a",
+    "b"
+  ],
+  "n_per_task": 16,
+  "intended_conditions": [
+    "baseline"
+  ],
+  "seeds": [
+    0
+  ],
+  "verifier_source_available": false,
+  "claims": {
+    "release_ready": true,
+    "method": "pass@k = 1-(1-c/n)^k"
+  },
+  "notes": "Synthetic local test fixture; not a real dataset."
+}
